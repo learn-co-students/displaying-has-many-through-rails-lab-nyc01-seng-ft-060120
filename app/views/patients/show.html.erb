@@ -12,11 +12,17 @@
 </table>
 <br>
 <h3>Appointments</h3>
-<% @patient.appointments.each do |appt| %>
 
 <ul>
-  <li><strong>Doctor: </strong><%= link_to appt.doctor_name, doctor_path(appt.doctor) %></li>
-  <li><strong>Time:  </strong> <%= link_to appt.date, appointment_path(appt)%></li>
+  <% @patient.appointments.each do |appt| %>
+  <li>
+    <strong>Doctor: </strong>
+    <%= link_to appt.doctor_name, doctor_path(appt.doctor) %>
+  </li>
+  <li>
+    <strong>Time: </strong>
+    <%= link_to appt.date, appointment_path(appt)%>
+  </li>
 </ul>
 
 

@@ -2,8 +2,8 @@
 <h1>Doctor Show Page</h1>
 <table>
   <tr>
-    <th><h2>Name</h2></th>
-    <th><h2>Department</h2></th>
+    <th><h3>Name</h3></th>
+    <th><h3>Department</h3></th>
   </tr>
   <tr>
     <td><%= @doctor.name %> </td>
@@ -12,11 +12,17 @@
 </table>
 <br>
 <h3>Appointments</h3>
-<% @doctor.appointments.each do |appt| %>
 
 <ul>
-  <li><strong>Patient: </strong><%= link_to appt.patient_name, patient_path(appt.patient) %></li>
-  <li><strong>Time:  </strong> <%= link_to appt.date, appointment_path(appt)%></li>
+  <% @doctor.appointments.each do |appt| %>
+  <li>
+    <strong>Patient: </strong>
+    <%= link_to appt.patient_name, patient_path(appt.patient) %>
+  </li>
+  <li>
+    <strong>Time:</strong> 
+    <%= link_to appt.date, appointment_path(appt)%>
+  </li>
 </ul>
 
 
