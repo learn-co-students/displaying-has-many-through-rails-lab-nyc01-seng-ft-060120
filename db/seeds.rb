@@ -8,11 +8,11 @@ leonard = Doctor.create({name: "Leonard 'Bones' McCoy", department: "Internal Me
 phillip = Doctor.create({name: "Phillip Chandler", department: "Internal Medicine"})
 michaela = Doctor.create({name: "Michaela Quinn", department: "Internal Medicine"})
 
-homer = Patient.create({name: "Homer Simpson", age: 38})
-bart = Patient.create({name: "Bart Simpson", age: 10})
-marge = Patient.create({name: "Marge Simpson", age: 36})
-lisa = Patient.create({name: "Lisa Simpson", age: 8})
-maggie = Patient.create({name: "Maggie Simpson", age: 1})
+homer = Patient.create({name: "Homer Simpson"})
+bart = Patient.create({name: "Bart Simpson"})
+marge = Patient.create({name: "Marge Simpson"})
+lisa = Patient.create({name: "Lisa Simpson"})
+maggie = Patient.create({name: "Maggie Simpson"})
 
 Appointment.create([
   {appointment_datetime: DateTime.new(2016, 03, 15, 18, 00, 0), patient: homer, doctor: hawkeye},

@@ -4,7 +4,7 @@ describe 'Appointment' do
 
   before do
     @mcdreamy = Doctor.create(name: "Derek Shepherd", department: "Neurosurgery")
-    @patient = Patient.create(name: "Russell Wilson", age: 27)
+    @patient = Patient.create(name: "Russell Wilson")
     @appointment = Appointment.create({appointment_datetime: DateTime.new(2016, 12, 25), patient: @patient, doctor: @mcdreamy})
   end
 

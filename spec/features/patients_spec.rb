@@ -11,11 +11,11 @@ describe "patients", type:  :feature do
     ])
 
     Patient.create([
-      {name: "Homer Simpson", age:38},
-      {name: "Bart Simpson", age:10},
-      {name: "Marge Simpson", age:36},
-      {name: "Lisa Simpson", age:8},
-      {name: "Maggie Simpson", age:1},
+      {name: "Homer Simpson"},
+      {name: "Bart Simpson"},
+      {name: "Marge Simpson"},
+      {name: "Lisa Simpson"},
+      {name: "Maggie Simpson"},
     ])
 
     Appointment.create([
@@ -35,10 +35,10 @@ describe "patients", type:  :feature do
   describe "#index page" do
     it 'lists all of the patients and the number of appointments they have' do
       visit patients_path
-      within("ul") do
+      # within("ul") do
         expect(page).to have_content("Name: Marge Simpson Number of Appointments: 2")
         expect(page).to have_content("Name: Bart Simpson Number of Appointments: 1")
-      end
+      # end
     end
   end
 
